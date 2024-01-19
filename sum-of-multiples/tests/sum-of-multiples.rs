@@ -8,7 +8,6 @@ fn no_multiples_within_limit() {
 }
 
 #[test]
-#[ignore]
 fn one_factor_has_multiples_within_limit() {
     let factors = &[3, 5];
     let limit = 4;
@@ -18,7 +17,6 @@ fn one_factor_has_multiples_within_limit() {
 }
 
 #[test]
-#[ignore]
 fn more_than_one_multiple_within_limit() {
     let factors = &[3];
     let limit = 7;
@@ -28,7 +26,6 @@ fn more_than_one_multiple_within_limit() {
 }
 
 #[test]
-#[ignore]
 fn more_than_one_factor_with_multiples_within_limit() {
     let factors = &[3, 5];
     let limit = 10;
@@ -38,7 +35,6 @@ fn more_than_one_factor_with_multiples_within_limit() {
 }
 
 #[test]
-#[ignore]
 fn each_multiple_is_only_counted_once() {
     let factors = &[3, 5];
     let limit = 100;
@@ -48,7 +44,6 @@ fn each_multiple_is_only_counted_once() {
 }
 
 #[test]
-#[ignore]
 fn a_much_larger_limit() {
     let factors = &[3, 5];
     let limit = 1000;
@@ -58,7 +53,6 @@ fn a_much_larger_limit() {
 }
 
 #[test]
-#[ignore]
 fn three_factors() {
     let factors = &[7, 13, 17];
     let limit = 20;
@@ -68,7 +62,6 @@ fn three_factors() {
 }
 
 #[test]
-#[ignore]
 fn factors_not_relatively_prime() {
     let factors = &[4, 6];
     let limit = 15;
@@ -78,7 +71,6 @@ fn factors_not_relatively_prime() {
 }
 
 #[test]
-#[ignore]
 fn some_pairs_of_factors_relatively_prime_and_some_not() {
     let factors = &[5, 6, 8];
     let limit = 150;
@@ -88,7 +80,6 @@ fn some_pairs_of_factors_relatively_prime_and_some_not() {
 }
 
 #[test]
-#[ignore]
 fn one_factor_is_a_multiple_of_another() {
     let factors = &[5, 25];
     let limit = 51;
@@ -98,7 +89,6 @@ fn one_factor_is_a_multiple_of_another() {
 }
 
 #[test]
-#[ignore]
 fn much_larger_factors() {
     let factors = &[43, 47];
     let limit = 10000;
@@ -108,7 +98,6 @@ fn much_larger_factors() {
 }
 
 #[test]
-#[ignore]
 fn all_numbers_are_multiples_of_1() {
     let factors = &[1];
     let limit = 100;
@@ -118,7 +107,6 @@ fn all_numbers_are_multiples_of_1() {
 }
 
 #[test]
-#[ignore]
 fn no_factors_means_an_empty_sum() {
     let factors = &[];
     let limit = 10000;
@@ -128,7 +116,6 @@ fn no_factors_means_an_empty_sum() {
 }
 
 #[test]
-#[ignore]
 fn the_only_multiple_of_0_is_0() {
     let factors = &[0];
     let limit = 1;
@@ -138,7 +125,6 @@ fn the_only_multiple_of_0_is_0() {
 }
 
 #[test]
-#[ignore]
 fn the_factor_0_does_not_affect_the_sum_of_multiples_of_other_factors() {
     let factors = &[3, 0];
     let limit = 4;
@@ -148,7 +134,6 @@ fn the_factor_0_does_not_affect_the_sum_of_multiples_of_other_factors() {
 }
 
 #[test]
-#[ignore]
 fn solutions_using_include_exclude_must_extend_to_cardinality_greater_than_3() {
     let factors = &[2, 3, 5, 7, 11];
     let limit = 10000;
