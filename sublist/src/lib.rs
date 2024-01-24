@@ -9,7 +9,7 @@ pub enum Comparison {
 
 pub fn sublist<T: PartialEq + std::clone::Clone>(first_list: &[T], second_list: &[T]) -> Comparison {
     //("Determine if the first list is equal to, sublist of, superlist of or unequal to the second list.");
-
+/*
     let len_first = first_list.len();
     let len_second = second_list.len();
 
@@ -28,7 +28,9 @@ pub fn sublist<T: PartialEq + std::clone::Clone>(first_list: &[T], second_list: 
     else {
         return Comparison::Unequal;
     }    
+*/
 
+    alternate_solution(first_list, second_list)
 }
 
 
@@ -124,4 +126,35 @@ fn second_list_comparison<T: PartialEq + std::clone::Clone>(first_list: &[T], se
     Comparison::Unequal
 
 }
+
+pub fn alternate_solution<T: PartialEq>(_first_list: &[T], _second_list: &[T]) -> Comparison{
+
+        match (_first_list.len(), _second_list.len()) {
+            (0, 0) => Comparison::Equal,
+            (0, _) => Comparison::Sublist,
+            (_, 0) => Comparison::Superlist,
+            (m, n) if m > n => {
+                if _first_list.windows(n).any(|sub| sub == _second_list) {
+                    Comparison::Superlist
+                } else {
+                    Comparison::Unequal
+                }
+            },
+
+            (m, n) if m < n => {
+                if _second_list.windows(m).any(|sub| sub == _first_list) {
+                    Comparison::Sublist
+                } else {
+                    Comparison::Unequal
+                }
+            },
+            (_, _) => {
+                if _first_list == _second_list {
+                    Comparison::Equal
+                } else {
+                    Comparison::Unequal
+                }
+            }
+        }
+    }
 
